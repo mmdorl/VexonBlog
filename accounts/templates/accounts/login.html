@@ -1,0 +1,366 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+
+<!-- Mirrored from websmithyui.com/vexon-demo/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 03 Apr 2025 04:47:54 GMT -->
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>وکسون || ورود</title>
+
+	<!--=====FAB ICON=======-->
+	<link rel="shortcut icon" href="{% static 'assets/img/logo/title1.svg'%}" type="image/x-icon" />
+
+	<!--=====CSS=======-->
+	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+	<link rel="stylesheet" href="{% static 'css/fontawesome.css' %}" />
+	<link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}" />
+	<link rel="stylesheet" href="{% static 'css/nice-select.css' %}" />
+	<link rel="stylesheet" href="{% static 'css/slick-slider.css' %}" />
+	<link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}" />
+	<link rel="stylesheet" href="{% static 'css/aos.css' %}" />
+	<link rel="stylesheet" href="../unpkg.com/swiper%4011.2.2/swiper-bundle.min.html" />
+	<link rel="stylesheet" href="{% static 'css/mobile-menu.css' %}" />
+	<link rel="stylesheet" href="{% static 'css/utility.css' %}" />
+	<link rel="stylesheet" href="{% static 'css/main.css' %}" />
+
+	<!--=====JQUERY=======-->
+	<script src="{% static 'assets/js/jquery-3-7-1.min.js' %}"></script>
+</head>
+
+<body>
+	{% comment %} <div class="paginacontainer">
+		<div class="progress-wrap">
+			<svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+				<path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+			</svg>
+		</div>
+	</div> {% endcomment %}
+
+	<!--=====progress END=======-->
+
+	<!--=====PRELOADER START=======-->
+
+	{% comment %} <div class="sec-preloader">
+		<div class="overlay-preloader flex cac vac" id="preloader">
+			<div>
+				<div class="loader preloader flex vac">
+					<svg width="200" height="200">
+						<circle class="background" cx="90" cy="90" r="80" transform="rotate(-90, 100, 90)" />
+						<circle class="outer" cx="90" cy="90" r="80" transform="rotate(-90, 100, 90)" />
+					</svg>
+					<span class="circle-background"></span>
+					<span class="logo animated fade-in"> </span>
+				</div>
+			</div>
+		</div>
+	</div> {% endcomment %}
+
+	<!--=====PRELOADER START=======-->
+
+	<!-- search popup start -->
+	<div class="search__popup">
+		<div class="container">
+			<div class="row">
+				<div class="col-xxl-12">
+					<div class="search__wrapper">
+						<div class="search__top d-flex justify-content-between align-items-center">
+							<div class="search__logo">
+								<a href="index.html">
+									<img src="{% static 'img/logo/white-logo.png' %}" alt="vexon" />
+								</a>
+							</div>
+							<div class="search__close">
+								<button type="button" class="search__close-btn search-close-btn">
+									<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M17 1L1 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+										<path d="M1 1L17 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+									</svg>
+								</button>
+							</div>
+						</div>
+						<div class="search__form">
+							<form action="#">
+								<div class="search__input">
+									<input class="search-input-field" type="text" placeholder="برای جستجو اینجا را تایپ کنید..." />
+									<span class="search-focus-border"></span>
+									<button type="submit">
+										<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M9.55 18.1C14.272 18.1 18.1 14.272 18.1 9.55C18.1 4.82797 14.272 1 9.55 1C4.82797 1 1 4.82797 1 9.55C1 14.272 4.82797 18.1 9.55 18.1Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+											<path d="M19.0002 19.0002L17.2002 17.2002" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+										</svg>
+									</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- search popup end -->
+
+	<!--=====HEADER START=======-->
+	<header>
+		<div class="header-area header-area1 d-none d-lg-block" id="header">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<div class="header-elements">
+							<div class="site-logo">
+								<a href="index.html">
+									<img src="{% static 'img/logo/header-logo1.png' %}" alt="vexon" />
+								</a>
+							</div>
+
+							<div class="main-menu-ex main-menu-ex1">
+								<ul>
+									<li>
+										<a href="index.html">صفحه اصلی <i class="fa-solid"></i></a>
+									</li>
+
+									<li>
+										<a href="#">مقالات <i class="fa-solid"></i></a>
+									</li>
+
+									<li class="dropdown-menu-parrent">
+										<a href="#" class="main1">دسته بندی مقالات <i class="fa-solid fa-angle-down"></i></a>
+										<ul>
+											<li><a href="#">برنامه نویسی</a></li>
+											<li><a href="#">طراحی سایت</a></li>
+										</ul>
+									</li>
+
+									<li>
+										<a href="contact.html">تماس با ما <i class="fa-solid"></i></a>
+									</li>
+								</ul>
+							</div>
+
+							<div class="header1-buttons">
+								<div class="vl-search-top">
+									<button class="search-open-btn"><i class="fa-regular fa-magnifying-glass"></i></button>
+								</div>
+								<a class="theme-btn1" href="#">ورود / ثبت نام </a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+
+	<!--=====HEADER END=======-->
+
+	<!--=====Mobile header start=======-->
+	<div class="mobile-header mobile-header-main d-block d-lg-none">
+		<div class="container-fluid">
+			<div class="col-12">
+				<div class="mobile-header-elements">
+					<div class="mobile-logo">
+						<a href="404-2.html"><img src="{% static 'img/logo/header-logo1.png'%}" alt="vexon" /></a>
+					</div>
+					<div class="mobile-nav-icon">
+						<i class="fa-duotone fa-bars-staggered"></i>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="mobile-sidebar d-block d-lg-none">
+		<div class="logo-m">
+			<a href="index.html"><img src="{% static 'img/logo/header-logo1.png' %}" alt="vexon" /></a>
+		</div>
+		<div class="menu-close">
+			<i class="fa-solid fa-xmark"></i>
+		</div>
+		<div class="mobile-nav">
+			<ul>
+				<li class="has-dropdown">
+					<a href="#">صفحه اصلی </a>
+					<ul class="sub-menu">
+						<li><a href="index.html">صفحه اصلی 1</a></li>
+						<li><a href="index2.html">صفحه اصلی 2</a></li>
+						<li><a href="index3.html">صفحه اصلی 3</a></li>
+						<li><a href="index4.html">صفحه اصلی 4</a></li>
+						<li><a href="index5.html">صفحه اصلی 5</a></li>
+						<li><a href="index6.html">صفحه اصلی 6</a></li>
+					</ul>
+				</li>
+				<li class="has-dropdown">
+					<a href="#">وبلاگ </a>
+					<ul class="sub-menu">
+						<li><a href="blog.html">وبلاگ  1</a></li>
+						<li><a href="blog2.html">وبلاگ  2</a></li>
+						<li><a href="blog3.html">وبلاگ  3</a></li>
+					</ul>
+				</li>
+				<li class="has-dropdown">
+					<a href="#">جزئیات وبلاگ </a>
+					<ul class="sub-menu">
+						<li><a href="blog-details1.html">جزئیات وبلاگ 1</a></li>
+						<li><a href="blog-details2.html">جزئیات وبلاگ 2</a></li>
+						<li><a href="blog-details3.html">جزئیات وبلاگ 3</a></li>
+						<li><a href="blog-details-sidebar-left.html">جزئیات وبلاگ 4</a></li>
+						<li><a href="blog-details-sidebar-right.html">جزئیات وبلاگ 5</a></li>
+						<li><a href="blog-single.html">جزئیات وبلاگ 6</a></li>
+					</ul>
+				</li>
+
+				<li class="has-dropdown">
+					<a href="#">صفحات </a>
+					<ul class="sub-menu">
+						<li><a href="author.html">نویسنده</a></li>
+						<li><a href="search.html">نتیجه جستجو</a></li>
+						<li><a href="contact.html">تماس با ما</a></li>
+						<li><a href="social-media.html">رسانه های اجتماعی</a></li>
+						<li><a href="404.html">404</a></li>
+					</ul>
+				</li>
+
+				<li class="has-dropdown has-dropdown1">
+					<a href="#" class="main">حساب کاربری</a>
+					<ul class="sub-menu">
+						<li><a href="login.html">ورود</a></li>
+						<li><a href="sigup.html">ثبت نام</a></li>
+						
+					</ul>
+				</li>
+				<li><a href="contact.html">تماس با ما</a></li>
+			</ul>
+
+			<div class="mobile-button">
+				<a class="theme-btn1" href="contact.html">ارسال نظرات <i class="fa-solid fa-arrow-left"></i></a>
+			</div>
+
+			<div class="footer-contact-area1 md:pl-0 pl-20 sm:pl-0 mt-30">
+				<h3 class="text-24 leading-26 font-semibold title1 pb-10">تماس با ما</h3>
+				<div class="contact-box d-flex">
+					<div class="icon">
+						<img src="{% static 'img/icons/footer1-icon1.svg'%}" alt="vexon" />
+					</div>
+					<div class="text">
+						<a href="mailto:contact@vexon.com">contact@vexon.com</a>
+					</div>
+				</div>
+
+				<div class="contact-box d-flex">
+					<div class="icon">
+						<img src="{% static 'img/icons/footer1-icon2.svg'%}" alt="vexon" />
+					</div>
+					<div class="text">
+						<a href="#">
+							ایران ، تهران ، زعفرانیه<br />
+							خیابان مهر ، ساختمان هستی
+						</a>
+					</div>
+				</div>
+
+				<div class="contact-box d-flex">
+					<div class="icon">
+						<img src="{% static 'img/icons/footer1-icon3.svg'%}" alt="vexon" />
+					</div>
+					<div class="text">
+						<a href="tel:123-456-7890">123-456-7890</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="contact-infos">
+				<h3>شبکه های اجتماعی</h3>
+				<ul class="social-icon">
+					<li>
+						<a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+					</li>
+					<li>
+						<a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+					</li>
+					<li>
+						<a href="#"><i class="fa-brands fa-youtube"></i></a>
+					</li>
+					<li>
+						<a href="#"><i class="fa-brands fa-instagram"></i></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<!--=====Mobile header end=======-->
+
+	<!--===== CONTENT AREA START=======-->
+
+	<div class="login-page sp bg-cover" style="background-image: url({% static 'img/bg/login-page-bg.jpg'%})">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="inner-main-heading">
+						<div class="page-prog">
+							<a href="index.html">صفحه اصلی</a>
+							<span><i class="fa-solid fa-angle-left"></i></span>
+							<p class="bold">ورود</p>
+						</div>
+						<h1>ورود</h1>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-5 m-auto">
+					<div class="login-form">
+						<h3>خوش آمدید</h3>
+						<p>لطفا ایمیل و رمز عبور خود را برای ورود وارد کنید.</p>
+						<form method="post">
+							{% csrf_token %}
+							<div class="single-input">
+								<label>نام کاربری</label>
+								<input type="username" id="username" name="username" placeholder=" نام کاربری" />
+							</div>
+							<div class="single-input">
+								<label>رمز عبور</label>
+								<input type="password" id="password" name="password" placeholder="رمز عبور خود را وارد کنید" />
+							</div>
+							<div class="button mt-30">
+								<button type="submit" class="theme-btn1">ورود</button>
+							</div>
+							<div class="text-center">
+								<p class="text">حساب کاربری ندارید؟ <a href="{% url 'accounts:register'%}">امروز ثبت نام کنید.</a> <br /></p>
+								
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--===== CONTENT AREA END=======-->
+
+	<!--=== js === -->
+	<script src="{% static 'js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'js/fontawesome.js' %}"></script>
+	<script src="{% static 'js/mobile-menu.js' %}"></script>
+	<script src="{% static 'js/jquery.magnific-popup.js' %}"></script>
+	<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+	<script src="{% static 'js/jquery.countup.js' %}"></script>
+	<script src="{% static 'js/slick-slider.js' %}"></script>
+	<script src="{% static 'js/circle-progress.js' %}"></script>
+	<script src="{% static 'js/jquery.nice-select.js' %}"></script>
+	<script src="{% static 'js/gsap.min.js' %}"></script>
+	<script src="{% static 'js/ScrollTrigger.min.js' %}"></script>
+	<script src="{% static 'js/swiper-bundle.js' %}"></script>
+	<script src="{% static 'js/Splitetext.js' %}"></script>
+	<script src="{% static 'js/text-animation.js' %}"></script>
+	<script src="{% static 'js/aos.js' %}"></script>
+	<script src="{% static 'js/SmoothScroll.js' %}"></script>
+	<script src="{% static 'js/jaquery-ripples.js' %}"></script>
+	<script src="{% static 'js/jquery.lineProgressbar.js' %}"></script>
+	<script src="{% static 'js/animation.js' %}"></script>
+	<script src="{% static 'js/main.js' %}"></script>
+</body>
+
+
+
+<!-- Mirrored from websmithyui.com/vexon-demo/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 03 Apr 2025 04:47:55 GMT -->
+</html>

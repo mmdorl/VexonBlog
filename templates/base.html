@@ -104,15 +104,19 @@
 		<div class="header-area header-area1 d-none d-lg-block" id="header">
 			<div class="container">
 				<div class="row">
+					
 					<div class="col-12">
+						
 						<div class="header-elements">
-							<div class="site-logo">
+							
+							<!-- <div class="site-logo">
 								<a href="index.html">
 									<img src="{% static 'img/logo/header-logo1.png' %}" alt="vexon" />
 								</a>
-							</div>
-
+							</div> -->
+							
 							<div class="main-menu-ex main-menu-ex1">
+								
 								<ul>
 									<li>
 										<a href="index.html">صفحه اصلی <i class="fa-solid"></i></a>
@@ -135,13 +139,23 @@
 									</li>
 								</ul>
 							</div>
-
+							{%if request.user.is_authenticated %}
+							<div class="header1-buttons">
+								
+								
+								 <span class="btn btn-secondary">{{request.user.username}}</span>
+								
+								<a class="theme-btn1" href="{% url "accounts:logout"%}"> خروج </a>
+							</div>
+							{% else %}
 							<div class="header1-buttons">
 								<div class="vl-search-top">
 									<button class="search-open-btn"><i class="fa-regular fa-magnifying-glass"></i></button>
 								</div>
-								<a class="theme-btn1" href="#">ورود / ثبت نام </a>
+								<a class="theme-btn1" href="{% url 'accounts:login'%}">ورود / ثبت نام </a>
 							</div>
+							{% endif %}
+							
 						</div>
 					</div>
 				</div>
