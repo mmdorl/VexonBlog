@@ -17,6 +17,9 @@ class SiteSettings(models.Model):
         verbose_name = 'تنظیمات سایت'
         verbose_name_plural = 'تنظیمات سایت'
 
+    def __str__(self):
+        return self.about_us_text
+
 
 class Newsletter(models.Model):
     email = models.EmailField(unique=True, verbose_name='ایمیل')
