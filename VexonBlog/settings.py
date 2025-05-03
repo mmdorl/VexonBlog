@@ -16,7 +16,6 @@ import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
@@ -28,7 +27,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -38,8 +36,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    #my app
-    'accounts', 'core'
+    # installed apps
+    'jalali_date',
+    # my app
+    'accounts',
+    'core',
+    'blog',
+
 ]
 
 MIDDLEWARE = [
@@ -66,7 +69,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
 
-                #my context
+                # my context
                 "context_processors.context_processors.blog_func",
             ],
         },
@@ -74,7 +77,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'VexonBlog.wsgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
@@ -85,7 +87,6 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
@@ -105,7 +106,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/5.2/topics/i18n/
 
@@ -116,7 +116,6 @@ TIME_ZONE = 'Asia/Tehran'
 USE_I18N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
@@ -130,3 +129,23 @@ MEDIA_URL = 'media/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# default settings (optional)
+JALALI_DATE_DEFAULTS = {
+    # if change it to true then all dates of the list_display will convert to the Jalali.
+    'LIST_DISPLAY_AUTO_CONVERT': False,
+    'Strftime': {
+        'date': '%y/%m/%d',
+        'datetime': '%H:%M:%S _ %y/%m/%d',
+    },
+    'Static': {
+        'js': [
+            'admin/js/django_jalali.min.js',
+        ],
+        'css': {
+            'all': [
+                'admin/css/django_jalali.min.css',
+            ]
+        }
+    },
+}
