@@ -1,5 +1,5 @@
 from django import forms
-from .models import Newsletter, SiteSettings
+from .models import Newsletter, SiteSettings, ContactUs
 
 
 class NewsLetterForm(forms.ModelForm):
@@ -8,3 +8,8 @@ class NewsLetterForm(forms.ModelForm):
         fields = ('email', )
 
 
+# class ContactUsForm(forms.ModelForm):
+#     class Meta:
+#         model = ContactUs
+#         fields = ['firstname', 'lastname', 'email', 'phone_number','subject','message']
+#         label = ['نام', 'نام خانوادگی', 'ایمیل', 'شماره تلفن', 'موضوع', 'پیام']

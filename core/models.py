@@ -31,3 +31,20 @@ class Newsletter(models.Model):
         
     def __str__(self):
         return self.email
+    
+
+class ContactUs(models.Model):
+    firstname = models.CharField(max_length=50, verbose_name='نام')
+    lastname = models.CharField(max_length=80, verbose_name='نام خانوادگی')
+    email = models.EmailField(verbose_name='ایمیل')
+    phone_number = models.CharField(max_length=11, verbose_name='شماره تلفن')
+    subject = models.CharField(max_length=80, verbose_name='موضوع')
+    message = models.TextField(verbose_name='پیام')
+    date_send = models.DateTimeField(auto_now_add=True, verbose_name='تاریخ ارسال')
+    class Meta:
+        verbose_name = 'تماس با ما'
+        verbose_name_plural = 'تماس با ما'
+    def __str__(self):
+        return f"{self.firstname} {self.lastname}: {self.message[0:50]}"
+
+

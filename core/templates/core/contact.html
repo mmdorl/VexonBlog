@@ -1,0 +1,132 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}تماس با ما{% endblock %}
+
+{% block content %}
+		<!--===== HERO AREA START=======-->
+
+		<div class="inner-hero bg-cover" style="background-image: url({% static "img/bg/inner-hero-bg.jpg" %})">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="main-heading">
+							<div class="page-prog">
+								<a href="{% url 'core:home' %}">صفحه اصلی</a>
+								<span><i class="fa-solid fa-angle-left"></i></span>
+								<p>وبلاگ</p>
+								<span><i class="fa-solid fa-angle-left"></i></span>
+								<p class="bold">تماس با ما</p>
+							</div>
+							<h1>تماس با ما</h1>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+		<!--===== HERO AREA END=======-->
+	
+		<!--===== CONTACT AREA START=======-->
+	
+		<div class="contact-page-sec sp">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-7 m-auto">
+						<div class="heading1 text-center">
+							<h2>ما دوست داریم از شما بشنویم</h2>
+							<p class="mt-16">{{ sitesettings.about_us_text }}</p>
+						</div>
+	
+						<div class="contact-page-from">
+							<div class="heading1">
+								<h5>ارسال نظرات</h5>
+								<p class="mt-10">اطلاعات تماس واضح از جمله شماره تلفن، ایمیل و آدرس را ارائه دهید.</p>
+							</div>
+							<form action="#" method="post">
+								{% csrf_token %}
+								<div class="row">
+									<div class="col-md-6">
+										<div class="single-input">
+											<input type="text" name="firstname" placeholder="نام" />
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="single-input">
+											<input type="text" name="lastname" placeholder="نام خانوادگی" />
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="single-input">
+											<input type="email" name="email" placeholder="ایمیل" />
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="single-input">
+											<input type="number" name="phone_number" placeholder="تلفن" />
+										</div>
+									</div>
+	
+									<div class="col-md-12">
+										<div class="single-input">
+											<input type="text" name="subject" placeholder="موضوع" />
+										</div>
+									</div>
+	
+									<div class="col-md-12">
+										<div class="single-input">
+											<textarea rows="5" name="message" placeholder="پیام"></textarea>
+										</div>
+										<div class="button mt-30">
+											<button class="theme-btn1" type="submit">ارسال پیام</button>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+	
+						<div class="row pt-20">
+							<div class="col-lg-4 col-md-6">
+								<div class="contact-page-box">
+									<div class="icon">
+										<img src="{% static 'img/icons/contact-page-box1.svg' %}" alt="vexon" />
+									</div>
+									<div class="heading">
+										<h4>ارسال ایمیل</h4>
+										<a href="mailto:{{ sitesettings.email_us }}">{{ sitesettings.email_us }}</a>
+									</div>
+								</div>
+							</div>
+	
+							<div class="col-lg-4 col-md-6">
+								<div class="contact-page-box">
+									<div class="icon">
+										<img src="{% static 'img/icons/contact-page-box2.svg' %}" alt="vexon" />
+									</div>
+									<div class="heading">
+										<h4>آدرس دفتر</h4>
+										<a href="#">{{ sitesettings.address }}</a>
+									</div>
+								</div>
+							</div>
+	
+							<div class="col-lg-4 col-md-6">
+								<div class="contact-page-box">
+									<div class="icon">
+										<img src="{% static 'img/icons/contact-page-box3.svg' %}" alt="vexon" />
+									</div>
+									<div class="heading">
+										<h4>شماره تماس</h4>
+										<a href="tel:{{ sitesettings.phone_us }}">{{ sitesettings.phone_us }}</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	</div>
+	
+		<!--===== CONTACT AREA END=======-->
+{% endblock %}
+
+	
